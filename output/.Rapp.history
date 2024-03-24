@@ -1,0 +1,4 @@
+load("/Users/annabearx/Documents/DATA_550/FinalProject3/output/mlr_table.rds")
+load("/Users/annabearx/Documents/DATA_550/FinalProject3/output/Multiple_linear_regression.rds")
+load("/Users/annabearx/Documents/DATA_550/FinalProject3/output/table1.rds")
+load("/Users/annabearx/Documents/DATA_550/FinalProject3/output/insurance_clean.rds")
