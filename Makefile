@@ -13,6 +13,9 @@ output/03_mlr.rds: code/03_mlr.R output/insurance_clean.rds
 output/FinalProject3.html: code/04_render_report.R
 	Rscript code/04_render_report.R
 
+install:
+    Rscript -e 'renv::restore()'
+    
 .PHONY:	clean
 clean:
 	rm -f output/*.rds && rm -f *.png && html
