@@ -9,8 +9,11 @@ output/02_scatterplot.png: code/02_scatterplot.R output/insurance_clean.rds
 	
 output/03_mlr.rds: code/03_mlr.R output/insurance_clean.rds
 	Rscript code/03_mlr.R
+	
+output/FinalProject3.html: code/04_render_report.R
+	Rscript code/04_render_report.R
 
 .PHONY:	clean
 clean:
-	rm -f output/*.rds && rm -f *.png
+	rm -f output/*.rds && rm -f *.png && html
 # && only executes second command if first command executes successfully

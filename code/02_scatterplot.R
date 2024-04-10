@@ -7,6 +7,7 @@ insurance <- readRDS(
 )
 
 library(ggplot2)
+library(cowplot)
 
 # Create a scatterplot of age vs. insurance charges
 scatterplot <- ggplot(insurance, aes(x = age, y = charges)) +
@@ -16,7 +17,9 @@ scatterplot <- ggplot(insurance, aes(x = age, y = charges)) +
     x = "Age",
     y = "Insurance Charges"
   ) +
-  theme_bw()
+  geom_point() +
+  geom_smooth(method = lm)
+  theme_cowplot(12)
 
 # Print the scatter plot
 print(scatterplot)

@@ -2,4 +2,8 @@
 .Rhistory
 .DS_Store
 
-output/scatterplot.png
+
+output/*.rds
+ouput/*.png
+output/*.html
+output/.DS_Store
