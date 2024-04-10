@@ -16,3 +16,11 @@ output: github_document
 -   The code is combined in `combined_report.Rmd`.
 
 `04_render_report.R` is used for rendering the combined report from the command line
+
+## Synchronizing Package Repository
+
+This project uses the `renv` package manager to manage packages to maintain a consistent package environment.
+
+To synchronize the package repository:
+
+1.  **Install `renv`**: If you haven't already installed `renv`, you can do so by running the following command in R: \`\`\`r install.packages("renv")
