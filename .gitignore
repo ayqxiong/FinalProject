@@ -5,3 +5,4 @@ check_libpaths.R
 check_working_dir.R
 
 output/.DS_Store
+code/.DS_Store
