@@ -13,8 +13,12 @@ output/03_mlr.rds: code/03_mlr.R output/insurance_clean.rds
 output/FinalProject3.html: code/04_render_report.R
 	Rscript code/04_render_report.R
 
+# make rule for renv::restore
+.PHONY: install
 install:
-    Rscript -e 'renv::restore()'
+Rscript -e "renv::restore(prompt=FALSE)"
+  				# prompt = FALSE automatically answers questions to install rule
+# renv::snapshot() to update packages
     
 .PHONY:	clean
 clean:
