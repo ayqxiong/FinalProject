@@ -4,8 +4,4 @@
 check_libpaths.R
 check_working_dir.R
 
-
-output/*.rds
-ouput/*.png
-output/*.html
 output/.DS_Store
