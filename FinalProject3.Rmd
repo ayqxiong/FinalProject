@@ -29,8 +29,12 @@ This section produces a multiple linear regression table using mlr. It then prod
 mlr_table <- readRDS(
   file = here::here("output/Multiple_linear_regression.rds")
 )
-mlr_table
+mlr_summary <- summary(mlr_table)
+mlr_coefficients <- mlr_summary$coefficients
+
+knitr::kable(as.data.frame(mlr_coefficients))
 ```
+
 
 # Figure
 This figure shows a scatter plot of The relationship between age and insurance charges. It shows that theres is a general positive correlation between age and medical bills. There seems to be three clustered spending groups.
