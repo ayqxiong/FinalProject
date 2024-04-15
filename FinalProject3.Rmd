@@ -38,7 +38,7 @@ knitr::kable(as.data.frame(mlr_coefficients))
 
 # Figure
 This figure shows a scatter plot of The relationship between age and insurance charges. It shows that theres is a general positive correlation between age and medical bills. There seems to be three clustered spending groups.
-```{r, scatterplot, echo=TRUE}
+```{r, scatterplot, results='asis', out.width='70%', out.height='70%', echo=TRUE}
 knitr::include_graphics(
   here::here("output/scatterplot.png")
 )
