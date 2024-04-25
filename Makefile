@@ -16,7 +16,7 @@ output/FinalProject3.html: code/04_render_report.R
 # make rule for renv::restore
 .PHONY: install
 install:
-Rscript -e "renv::restore(prompt=FALSE)"
+	Rscript -e "renv::restore(prompt=FALSE)"
   				# prompt = FALSE automatically answers questions to install rule
 # renv::snapshot() to update packages
     
