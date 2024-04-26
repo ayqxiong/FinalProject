@@ -13,7 +13,6 @@ here::i_am("code/02_scatterplot.R")
 insurance <- readRDS(
   file = here::here("output/insurance_clean.rds")
 )
-
 ```
 
 # Demographics
