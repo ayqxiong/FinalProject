@@ -33,3 +33,7 @@ RENVFILES = renv.lock renv/activate.R renv/settings.json
 docker_image: $(PROJECTFILES) $(RENVFILES) dockerfile
 	docker build -t finaldocker .
 	touch $@
+
+# Container
+report/finalreport.html:
+	docker run -v "docker run -v "$$(pwd)/report":/FinalProject_report/report ayqxiong/finaldocker || "/$$(pwd)/report":/FinalProject_report/report ayqxiong/finaldocker

@@ -25,7 +25,15 @@ To synchronize the package repository:
 1.  **Install** `renv`: Install `renv` in R using: `install.packages("renv")` in terminal, if you haven't already done so
 2.  **Restore** `renv`: Use `make install` to restore renv
 
-## Building Docker Image
+## Docker
+
+1.  Build image: `make docker_image`
+2.  Run report with local docker image `finaldocker`
+    -   Windows: `docker run -v "/$$(pwd)/report":/Final_Project/report finaldocker`
+
+    -   Mac: `docker run -v "$$(pwd)/report":/Final_Project/report finaldocker`
+
+## Dockerhub
 
 -   Link to docker image: <https://hub.docker.com/r/ayqxiong/finaldocker>
 
