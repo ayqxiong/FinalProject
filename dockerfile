@@ -21,8 +21,8 @@ FROM rocker/r-ubuntu
 RUN apt-get update
 RUN apt-get install -y pandoc
 
-WORKDIR /Final_Project
-COPY --from=base /Final_Project .
+WORKDIR FinalProject_report
+COPY --from=base /FinalProject_report .
 
 # Add folders
 RUN mkdir code

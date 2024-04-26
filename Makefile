@@ -24,3 +24,12 @@ install:
 clean:
 	rm -f output/*.rds && rm -f *.png && html
 # && only executes second command if first command executes successfully
+
+# Docker
+PROJECTFILES = finalreport.rmd code/04_render_report.R code/00_clean_data.R code/01_table1.R code/02_scatterplot.R code/03_mlr.R Makefile
+RENVFILES = renv.lock renv/activate.R renv/settings.json
+
+# Build image
+docker_image: $(PROJECTFILES) $(RENVFILES) dockerfile
+	docker build -t finaldocker .
+	touch $@
