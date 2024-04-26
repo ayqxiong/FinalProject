@@ -23,7 +23,7 @@ This project uses the `renv` package manager to manage packages to maintain a co
 To synchronize the package repository:
 
 1.  **Install `renv`**: Install `renv` in R using: `install.packages("renv")` in terminal, if you haven't already done so
-2.  **Restore** `renv`: Use make install to restore renv
+2.  **Restore** `renv`: Use `make install` to restore renv
 
 ## Building Docker Image
 
