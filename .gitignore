@@ -1,7 +1,6 @@
 .RData
 .Rhistory
 .DS_Store
-docker_image
 check_libpaths.R
 check_working_dir.R
 

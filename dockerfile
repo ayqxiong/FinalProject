@@ -27,11 +27,13 @@ COPY --from=base /FinalProject_report .
 # Add folders
 RUN mkdir code
 RUN mkdir output
+RUN mkdir report
 
 # Copy needed files
 COPY code code
 COPY Makefile .
 COPY finalreport.Rmd .
+COPY insurance.csv .
 
 # Make report; move
 CMD make && mv finalreport.html report
