@@ -10,7 +10,7 @@ output/02_scatterplot.png: code/02_scatterplot.R output/insurance_clean.rds
 output/03_mlr.rds: code/03_mlr.R output/insurance_clean.rds
 	Rscript code/03_mlr.Rmak
 	
-report/finalreport.html: code/04_render_report.R
+output/finalreport.html: code/04_render_report.R
 	Rscript code/04_render_report.R
 
 # make rule for renv::restore
