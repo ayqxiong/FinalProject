@@ -14,8 +14,14 @@ RUN mkdir renv/.cache
 ENV RENV_PATHS_CACHE renv/.cache
 
 RUN R -e "renv::restore()"
-RUN R -e "install packages('gtsummary')"
 
+# IF RENV::RESTORE DOESNT WORK, uncomment the code below and remove RUN R -e "renv::restore()":
+# RUN R -e "install packages('gtsummary')"
+# RUN R -e "install packages('dplyr')"
+# RUN R -e "install packages('labelled')"
+# RUN R -e "install packages('ggplot')"
+# RUN R -e "install packages('cowplot')"
+# RUN R -e "install packages('rmarkdown')"
 
 ###### DO NOT EDIT STAGE 1 BUILD LINES ABOVE ######
 
@@ -44,8 +50,6 @@ COPY renv/settings.json renv
 
 RUN mkdir renv/.cache
 ENV RENV_PATHS_CACHE renv/.cache
-
-RUN R -e "renv::restore()"
 
 ###### DO NOT EDIT STAGE 1 BUILD LINES ABOVE ######
 
