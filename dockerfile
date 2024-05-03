@@ -17,7 +17,6 @@ RUN R -e "renv::restore()"
 
 ###### DO NOT EDIT STAGE 1 BUILD LINES ABOVE ######
 
-FROM rocker/r-ubuntu
 RUN apt-get update
 RUN apt-get install -y pandoc
 
